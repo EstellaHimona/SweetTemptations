@@ -1,0 +1,181 @@
+<!-- Here are the links of the pages that have the pictures I have used for my website
+Logo small: https://www.freelancer.com/contest/Logo-Design-for-Sweet-Temptations-310911-byentry-7395157?w=f&ngsw-bypass=
+Logo big: https://www.freelancer.com/contest/Logo-Design-for-Sweet-Temptations-310911?w=f&ngsw-bypass=
+Chocolate Cake: https://tasty.co/recipe/the-ultimate-chocolate-cake
+Caramel cake: https://www.homecookingadventure.com/recipes/apple-walnut-caramel-cake
+Red Velvet Cake: https://tatyanaseverydayfood.com/recipe-items/red-velvet-cake/
+Mille Feuille: https://www.bakingmywaythroughgermany.com/2016/01/napoleons-mille-feuille/
+Vanilla Cake: https://www.lifeloveandsugar.com/peanut-butter-chocolate-layer-cake/
+Pistachio Cake: https://www.tasteandtellblog.com/coconut-pistachio-pudding-cake/
+Strawberry Tart: https://somethewiser.com/dark-chocolate-strawberry-tart.html
+Profiteroles: https://www.bbc.co.uk/food/recipes/chocolateprofiterole_86196
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Sweet Temptations Confectionary</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<header>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <div class="topnav" id="myTopnav">
+            <a class="navbar-brand" href="about.html">
+                <div class="logo-image">
+                    <img src="images/st%20cupcake%20logo.jpg" class="img-fluid">
+                </div>
+            </a>
+            <a href="about.html">About</a>
+            <a href="shop.html">Shop</a>
+            <a href="login.php">My Account</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <br><br><br><br><br><br><br>
+        <h1>Confectionary</h1>
+        <h2>Sweet Temptations</h2>
+    </header>
+
+<body style="font-size: 10px">
+
+
+    <!-- Slideshow container -->
+    <!-- Title: How to create a slideshow
+    Author: W3Schools.com
+    Date: 2020
+    Availability: https://www.w3schools.com/howto/howto_js_slideshow.asp 
+    -->
+
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <img src="images/choc_cake.jpg" style="width:100%" alt="Black Forest" title="Black Forest">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/caramelcake.jpg" style="width:100%" alt="Sweet Dreams" title="Sweet Dreams">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/millefeuilles.jpg" style="width:100%" alt="Mille Feuille" title="Mille Feuille">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/pistachiocake.jpg" style="width:100%" alt="Pistachio Cake" title="Pistachio Cake">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/vanilla_peanut.jpg" style="width:100%" alt="Vanilla Cake with Peanut Butter Frosting" title="Vanilla Cake with Peanut Butter Frosting">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/redvelvet.jpg" style="width:100%" alt="Red Velvet Cake" title="Red Velvet Cake">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/strawberrytart.jpg" style="width:100%" alt="Strawberry Tart with Dark Chocolate" title="Strawberry Tart with Dark Chocolate">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/profiteroles.jpg" style="width:100%" alt="Profiteroles" title="Profiteroles">
+        </div>
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+        <span class="dot" onclick="currentSlide(8)"></span>
+    </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+    </script>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 2500); // Change image every 2.5 seconds
+        }
+
+    </script>
+    <div>
+        <article>
+             <h2>Our Story</h2>
+            <p>Bridget Hailey began her love of chocolate in 1985 when she got her first job at a local confectionary. That time, she realised how enthusiastic she was about baking so 5 years later she decided to leave that place and start her own business. At first, her parents were not approving of that; they kept reminding her that it would be really difficult especially at the beginning, until she would attract her customers to visit her confectionary instead of other ones more 'popular'. But Bridget was desperate enough so to start her own business calling it 'Sweet Temptations'. It did not take long enough for people to start spreading rumours around about how tasty and delicious her cakes are, so very soon her confectionary had become very popular. More and more people daily would visit the store to try theirselves Bridget`s recipes. Nowadays, Sweet Temptations counts 5 successful stores, located around the city and several thousands of fully satisfied customers.
+                <br><br>
+                <a href="images/st cupcake full.jpg"><img src="images/st cupcake full.jpg" class="center" /></a><br>
+            </p>
+        </article>
+        <article>
+            <div style="display: block; margin-left: auto; margin-right: auto; width: 100%;">
+                <a href="images/store.jpg"><img src="images/store.jpg" alt="our store" title="Our Store" /></a>
+                <a href="images/store1.jpg"><img src="images/store1.jpg" alt="red velvet cake" title="Red Velvet Cakes" /></a>
+                <a href="images/choc_cake.jpg"><img src="images/choc_cake.jpg" alt="chocolate cake" title="Our Speciality" /></a>
+                <a href="images/strawberrytart.jpg"><img src="images/strawberrytart.jpg" alt="strawberry tart" title="Strawberry Tart"/></a>
+            </div>
+        </article>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <p><em>Copyright &copy; 2021 Sweet Temptations Confectionary</em></p>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h4>Contact us</h4>
+                    <ul class="list-unstyled mb-0">
+                        <li><i class="fas fa-phone"></i>+44 123 121 2211</li>
+                        <li><i class="fas fa-envelope"></i>email@sweettemptations.confectionary.co.uk</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
